@@ -29,3 +29,9 @@ import createformroute from "./routes/createformroute.js";
 app.use("/api/v1", createformroute);
 
 export default app;
+
+app.get("/", (req, res) =>
+  res.send(
+    `<h1>Its working. Click to visit <a href=${process.env.FRONTEND_URL}>Link</a></h1>`
+  )
+);
